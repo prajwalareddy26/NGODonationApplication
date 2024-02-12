@@ -1,0 +1,17 @@
+package com.jnit;
+
+import com.jnit.Model.User;
+import com.jnit.Repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository ur;
+
+    public void insert(User u){
+        ur.save(u);
+    }
+
+}
